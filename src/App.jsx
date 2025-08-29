@@ -1,7 +1,8 @@
 // src/App.jsx
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import Navbar from './components/Navbar'   // ✅ fixed case
+import { Navbar } from './components/Navbar'
+
 import Home from './pages/Home'
 import CarDetails from './pages/CarDetails'
 import Cars from './pages/Cars'
