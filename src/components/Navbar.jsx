@@ -6,6 +6,8 @@ import { useAppContext } from '../context/AppContext'
 import toast from 'react-hot-toast'
 import { motion } from 'motion/react'
 
+
+
 const Navbar = () => {
   const { setShowLogin, user, logout, isOwner, axios, setIsOwner } = useAppContext()
 
@@ -35,6 +37,7 @@ const Navbar = () => {
       className={`flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 text-gray-600 border-b border-borderColor relative transition-all ${location.pathname === '/' && 'bg-light'
         }`}
     >
+      {/* Logo */}
       <Link to='/'>
         <motion.img whileHover={{ scale: 1.05 }} src={assets.logo} alt='logo' className='h-8' />
       </Link>
@@ -50,7 +53,7 @@ const Navbar = () => {
           </Link>
         ))}
 
-        {/* Search bar (only on large screens) */}
+        {/* Search bar (desktop only) */}
         <div className='hidden lg:flex items-center text-sm gap-2 border border-borderColor px-3 rounded-full max-w-56'>
           <input
             type='text'
@@ -90,5 +93,6 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar   // ✅ only once at the bottom
+
 
